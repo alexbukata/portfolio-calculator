@@ -7,4 +7,4 @@
 
 Сервер запускается следующей командой
 
-```java -jar portfolio-calculator-0.1.0-jar-with-dependencies.jar``` 
+```java -jar target/portfolio-calculator-0.1.0-jar-with-dependencies.jar``` 
