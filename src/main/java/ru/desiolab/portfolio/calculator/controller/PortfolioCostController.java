@@ -6,6 +6,8 @@ import ru.desiolab.portfolio.calculator.service.PortfolioCostService;
 
 import javax.inject.Inject;
 
+import static java.util.Objects.isNull;
+
 public class PortfolioCostController {
 
     private final PortfolioCostService portfolioCostService;
@@ -16,7 +18,7 @@ public class PortfolioCostController {
     }
 
     public CalculatePortfolioResponse calculateCost(CalculatePortfolioRequest request) {
-        if (request.portfolioEntries().isEmpty()) {
+        if (isNull(request.portfolioEntries()) || request.portfolioEntries().isEmpty()) {
             return new CalculatePortfolioResponse();
         }
         validate(request);

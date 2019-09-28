@@ -53,7 +53,7 @@ class PortfolioCostControllerTest {
         //given
         mockIex(aapl, sector, 10.00);
         CalculatePortfolioRequest request = new CalculatePortfolioRequest()
-                .portfolioEntries(List.of(portfolio(aapl, 1000)));
+                .portfolioEntries(List.of(portfolio(aapl, 100)));
         //when
         CalculatePortfolioResponse response = portfolioCostController.calculateCost(request);
         //then
